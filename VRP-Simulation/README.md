@@ -2,6 +2,14 @@
 
 Simulador de roteamento de veículos com capacidade limitada (CVRP), usando OR-Tools e PyVRP. Tem um cenário no mapa e um laboratório com geração e importação de instâncias VRP. As buscas são heurísticas, sem certificado de ótimo global.
 
+![Cenário no mapa com rotas pelas ruas e resultados da otimização](docs/images/mapa.jpg)
+
+*Cenário no mapa com dados sintéticos.*
+
+![Laboratório sintético com grafo distribuído, grade e métricas da solução](docs/images/laboratorio.jpg)
+
+*Laboratório sintético na vista distribuída.*
+
 ## Executar
 
 Use Python 3.12 e Node.js 24. Na pasta que contém `backend` e `frontend`:
