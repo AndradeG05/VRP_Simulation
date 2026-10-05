@@ -1,0 +1,121 @@
+[
+  {
+    "file": "P-n60-k15.vrp",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/instance/93",
+    "sha256": "58c7ca24feaf132b0c31ce89f237e2981a40f2ec40e92c9a198b21b7ae8b25d6",
+    "public_sha256": "fa28fb1cfc39503559ceda3a44c2ddb0472af579ec150d863d9d23c041a617f4",
+    "checked_at": "2026-10-04T15:10:11.001726+00:00",
+    "matches_public_text": false,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms",
+    "matches_routing_instance": true,
+    "routing_fingerprint": "9f8674c1d699e11870ab229dc66044e5bc1337219a8a5924d917b0b4bbfda30b",
+    "difference": "O COMMENT local omite Optimal value: 968 e o fechamento do parêntese. Instâncias importadas têm o mesmo fingerprint."
+  },
+  {
+    "file": "A-n32-k5.vrp",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/instance/4",
+    "sha256": "2ebedd0631c4c56c08ba3b1476ac874a7d54cc448bd3795de534f43b2c099ce2",
+    "public_sha256": "2ebedd0631c4c56c08ba3b1476ac874a7d54cc448bd3795de534f43b2c099ce2",
+    "checked_at": "2026-10-04T15:10:11.001726+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "B-n31-k5.vrp",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/instance/6",
+    "sha256": "4c21caba6dd9c2e62d9e51defe45b9b318a931456e4d6e714c0ebd910447fad9",
+    "public_sha256": "4c21caba6dd9c2e62d9e51defe45b9b318a931456e4d6e714c0ebd910447fad9",
+    "checked_at": "2026-10-04T15:10:11.001726+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "E-n22-k4.vrp",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/instance/55",
+    "sha256": "64abec768ee250e25523efe16519de5caa321ccea98aa927fc7b626629b09899",
+    "public_sha256": "64abec768ee250e25523efe16519de5caa321ccea98aa927fc7b626629b09899",
+    "checked_at": "2026-10-04T15:10:10.998837+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "E-n51-k5.vrp",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/instance/60",
+    "sha256": "e47343ac4259f0b752793be02087e2ffdbcbb62ef65b808d03a6488fec1422bc",
+    "public_sha256": "e47343ac4259f0b752793be02087e2ffdbcbb62ef65b808d03a6488fec1422bc",
+    "checked_at": "2026-10-04T15:10:11.303554+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "P-n19-k2.vrp",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/instance/76",
+    "sha256": "ffce851458f3ccd4fb790403e91bb4ad6e495c37704a68f8563b995e97e38892",
+    "public_sha256": "ffce851458f3ccd4fb790403e91bb4ad6e495c37704a68f8563b995e97e38892",
+    "checked_at": "2026-10-04T15:10:11.315626+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "A-n32-k5.sol",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/bks/4",
+    "sha256": "a23da588e19d97533c94fb574ed42edfade007465d7448e4840885b0888404ca",
+    "public_sha256": "a23da588e19d97533c94fb574ed42edfade007465d7448e4840885b0888404ca",
+    "checked_at": "2026-10-04T15:10:11.334195+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "B-n31-k5.sol",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/bks/6",
+    "sha256": "508df4497a714d7627f32f6993ff637a79ea6452235b318539757ff848a077e5",
+    "public_sha256": "508df4497a714d7627f32f6993ff637a79ea6452235b318539757ff848a077e5",
+    "checked_at": "2026-10-04T15:10:11.334195+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "E-n22-k4.sol",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/bks/55",
+    "sha256": "d3294f16867c6a74bc79f4dad4009f1be639479901c86c3580bf0368feb19a83",
+    "public_sha256": "d3294f16867c6a74bc79f4dad4009f1be639479901c86c3580bf0368feb19a83",
+    "checked_at": "2026-10-04T15:10:11.624012+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "E-n51-k5.sol",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/bks/60",
+    "sha256": "61f076693230586439253b1cd45f0e8799f18e5ae53251af50248a726857842e",
+    "public_sha256": "61f076693230586439253b1cd45f0e8799f18e5ae53251af50248a726857842e",
+    "checked_at": "2026-10-04T15:10:11.639803+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "P-n19-k2.sol",
+    "reference_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/download/bks/76",
+    "sha256": "a72d1922d245ddc4d4abb6cfb929e8831bd17de4e438875dc97f13088709e45b",
+    "public_sha256": "a72d1922d245ddc4d4abb6cfb929e8831bd17de4e438875dc97f13088709e45b",
+    "checked_at": "2026-10-04T15:10:11.639803+00:00",
+    "matches_public_text": true,
+    "comparison": "UTF-8; CRLF convertido em LF; espaços externos removidos.",
+    "terms_url": "https://galgos.inf.puc-rio.br/cvrplib/index.php/en/register/terms"
+  },
+  {
+    "file": "explicit-lower-row.vrp",
+    "source": "Fixture local de teste, identificada pelo COMMENT do arquivo; sem benchmark público declarado.",
+    "sha256": "c36f4f5adfd693f7175a6dc9d37beb615efd5b741b687303dfdb99e9a6e210f7",
+    "purpose": "Verificar matriz EXPLICIT LOWER_ROW e depósito com ID 2."
+  }
+]
