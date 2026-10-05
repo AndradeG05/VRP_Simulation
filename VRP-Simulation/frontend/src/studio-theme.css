@@ -1,0 +1,174 @@
+
+:root,
+.geo-lab.workbench {
+  --page: #fafaf9;
+  --panel: #ffffff;
+  --soft: #f5f5f4;
+  --ink: #111111;
+  --muted: #646464;
+  --line: #dedede;
+  --accent: #222222;
+  --accent-hover: #3d3d3d;
+  --accent-soft: #efefed;
+  --focus: #264b9b;
+  --graph-grid-minor: #e9e9e6;
+  --graph-grid-major: #d6d9d5;
+  --graph-node: #646464;
+  --radius: 4px;
+  font-family: Montserrat, "Segoe UI", sans-serif;
+}
+body { background: var(--page); }
+::selection, .workbench ::selection { background: #dce6f5; color: #111; }
+* { scrollbar-color: #bcbcbc var(--soft); scrollbar-width: thin; }
+:where(input, textarea)::placeholder { color: #646464; opacity: 1; }
+:where(button, a, input, select, summary, canvas):focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+:where(input, select, textarea) { caret-color: var(--ink); accent-color: var(--accent); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0; }
+
+.app-shell { max-width: 1800px; padding: 0 24px; }
+.app-shell .app-header { min-height: 92px; padding: 18px 0; background: var(--page); color: var(--ink); border-bottom: 1px solid var(--line); }
+.app-header h1 { font-size: 25px; font-weight: 650; letter-spacing: -.025em; line-height: 1.2; }
+.app-header .app-title p { font-size: 12px; color: var(--muted); max-width: 72ch; }
+.app-header .app-title p strong { color: var(--ink); }
+.app-header .icon-button { color: var(--ink); }
+.app-header .icon-button:hover:not(:disabled) { background: var(--soft); }
+.app-shell .connection { border-radius: 4px; padding: 7px 9px; font-size: 11px; white-space: nowrap; }
+.app-shell .experience-tabs { padding: 0; margin: 0 0 14px; border-bottom: 1px solid var(--line); gap: 16px; }
+.app-shell .experience-tabs button { min-height: 44px; padding: 10px 0; font-size: 12px; font-weight: 500; }
+.app-shell .experience-tabs button.selected { background: transparent; color: var(--ink); box-shadow: inset 0 -2px var(--ink); font-weight: 650; }
+.app-shell .controls-toggle { min-height: 34px; padding: 7px 12px; font-size: 11px; margin-bottom: 12px; }
+.app-shell .lab-layout { grid-template-columns: 236px minmax(0, 1fr) 250px; gap: 16px; padding: 0 0 24px; }
+.app-shell .lab-layout.awaiting-instance { grid-template-columns: 236px minmax(0, 1fr); }
+.app-shell .controls-collapsed { grid-template-columns: minmax(0, 1fr) 250px; }
+.app-shell.presentation .lab-layout { grid-template-columns: minmax(0, 1fr) 250px; }
+.app-shell .workspace { min-width: 0; }
+.app-shell :is(.control-panel, .solution-panel, .canvas-panel, .timeline-panel, .chart-panel, .simulation-panel, .route-table-panel) { border: 1px solid var(--line); background: var(--panel); border-radius: 4px; box-shadow: none; }
+.app-shell :is(.control-panel, .solution-panel) section { padding: 16px; }
+.app-shell .section-title { font-size: 12px; font-weight: 650; margin-bottom: 12px; }
+.app-shell .field-hint, .app-shell .solver-note { font-size: 11px; line-height: 1.6; color: var(--muted); }
+.app-shell .button { border-radius: 4px; font-size: 12px; }
+.app-shell :is(.generate-button, .optimize-button) { background: var(--accent); color: #fff; border-color: var(--accent); }
+.app-shell :is(.generate-button, .optimize-button):hover:not(:disabled) { background: var(--accent-hover); }
+.app-shell :is(input:not([type="checkbox"]):not([type="range"]), select) { font-size: 12px; border-radius: 3px; }
+
+.app-shell .canvas-toolbar { padding: 10px 16px; min-height: 58px; background: var(--panel); gap: 12px; }
+.app-shell .mode-tabs { background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding: 3px; gap: 3px; }
+.app-shell .mode-tabs button { min-height: 34px; padding: 8px 14px; border-radius: 2px; font-size: 12px; font-weight: 500; }
+.app-shell .mode-tabs button.active { color: var(--ink); background: var(--panel); box-shadow: none; font-weight: 650; }
+.app-shell .label-toggle { font-size: 11px; font-weight: 600; white-space: nowrap; }
+.graph-view-toolbar { display: flex; gap: 4px; padding: 8px 20px; border-bottom: 1px solid var(--line); background: var(--panel); }
+.graph-view-toolbar button { min-height: 32px; padding: 6px 12px; border: 1px solid transparent; border-radius: 3px; color: var(--muted); background: transparent; font-size: 11px; font-weight: 500; }
+.graph-view-toolbar button:hover { color: var(--ink); background: var(--soft); }
+.graph-view-toolbar button.selected { color: var(--ink); background: var(--soft); border-color: var(--line); font-weight: 650; }
+.app-shell .canvas-heading { padding: 18px 20px 14px; align-items: flex-start; gap: 16px; }
+.app-shell .canvas-heading h2 { font-size: 19px; font-weight: 650; letter-spacing: -.02em; }
+.graph-context { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11px; line-height: 1.6; color: var(--muted); margin-top: 7px; }
+.graph-context strong { font-weight: 550; color: var(--ink); }
+.app-shell .state-chip { padding: 5px 8px; font-size: 10px; border-radius: 3px; white-space: nowrap; background: var(--soft); }
+.map-wrap { background: var(--page); }
+.app-shell .map-wrap > canvas { display: block; width: 100%; height: clamp(520px, 68vh, 800px); touch-action: none; }
+.app-shell .map-wrap.compact > canvas { height: clamp(390px, 52vh, 600px); }
+.app-shell.presentation .map-wrap > canvas { height: 70vh; }
+.graph-map-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px; border-top: 1px solid var(--line); background: var(--panel); }
+.graph-map-footer .map-tools { position: static; display: flex; flex-direction: row; order: 1; flex-shrink: 0; border-radius: 4px; border: 1px solid var(--line); box-shadow: none; background: var(--panel); }
+.map-tools button { width: 36px; height: 36px; min-height: 36px; color: var(--ink); }
+.graph-map-footer .map-tools button + button { border-top: 0; border-left: 1px solid var(--line); }
+.map-tools button:hover { background: var(--soft); }
+.graph-map-footer .map-note { position: static; font-size: 10px; color: var(--muted); gap: 6px; flex-wrap: wrap; }
+.map-note .ml-3 { margin-left: auto; }
+.map-tooltip { top: 14px; left: 16px; max-width: calc(100% - 32px); border-radius: 4px; box-shadow: 0 4px 12px #11111114; font-size: 11px; pointer-events: none; }
+.map-tooltip b { font-weight: 650; }
+.graph-route-focus { position: absolute; top: 14px; right: 16px; display: grid; gap: 5px; padding: 12px 32px 12px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; font-size: 10px; }
+.graph-route-focus > span:first-child { display: flex; align-items: center; gap: 6px; font-weight: 650; }
+.graph-route-focus i { width: 7px; height: 7px; border-radius: 50%; }
+.graph-route-focus strong { font-size: 19px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.graph-route-focus small { font-size: 10px; font-weight: 500; }
+.graph-route-focus > span:last-of-type { color: var(--muted); }
+.graph-route-focus button { position: absolute; top: 4px; right: 4px; width: 24px; height: 24px; display: grid; place-items: center; }
+.app-shell .file-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.app-shell .file-actions button { display: flex; flex-direction: column; gap: 6px; align-items: center; justify-content: center; min-height: 64px; padding: 8px 3px; border: 1px solid var(--line); border-radius: 4px; font-size: 10px; text-align: center; }
+.app-shell .file-actions button:hover:not(:disabled) { background: var(--soft); }
+.app-shell .canvas-footer { padding: 12px 20px; border-top: 1px solid var(--line); font-size: 10px; color: var(--muted); gap: 8px; flex-wrap: wrap; }
+.app-shell .compare-label { padding: 12px 16px; font-size: 11px; color: var(--muted); }
+.compare-label b { color: var(--ink); font-weight: 650; }
+.app-shell .metric-value { font-size: 29px; font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.app-shell .small-metrics .metric-value { font-size: 20px; }
+.app-shell .execution-stats b { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.client-inspector { background: var(--soft); }
+.fleet-routes { max-height: 440px; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.app-shell .route-card { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 12px 0; margin-bottom: 0; background: transparent; }
+.app-shell .route-card:last-child { border-bottom: 0; }
+.app-shell .route-card.selected { padding-inline: 8px; background: var(--soft); }
+.app-shell .route-card-heading { font-size: 11px; }
+.app-shell .route-card-heading b { font-size: 12px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.app-shell .route-load { font-size: 10px; }
+.app-shell .capacity-track { height: 3px; border-radius: 0; background: var(--line); }
+.route-detail h3 { font-size: 11px; font-weight: 600; color: var(--muted); }
+.app-shell .route-table-panel th, .app-shell .route-table-panel td { font-size: 11px; }
+.app-shell .route-table-panel { margin-bottom: 20px; }
+
+
+.workbench .wb-header { background: var(--page); color: var(--ink); border-bottom: 1px solid var(--line); min-height: 110px; padding-top: 22px; padding-bottom: 22px; }
+.workbench .wb-scenario h1 { font-size: 28px; font-weight: 650; }
+.workbench .wb-scenario p, .workbench .wb-scenario p strong { color: var(--muted); }
+.workbench .wb-optimize.cds--btn { background: var(--accent); color: #fff; }
+.workbench .wb-optimize.cds--btn:hover:not(:disabled) { background: var(--accent-hover); }
+
+@media (max-width: 1200px) {
+  .app-shell .lab-layout, .app-shell .lab-layout.awaiting-instance { grid-template-columns: 220px minmax(0, 1fr); }
+  .app-shell .controls-collapsed, .app-shell.presentation .lab-layout { grid-template-columns: minmax(0, 1fr) 240px; }
+  .app-shell .solution-panel { grid-column: 2; }
+  .app-shell .controls-collapsed .solution-panel { grid-column: auto; }
+}
+@media (max-width: 900px) {
+  .app-shell { padding: 0 16px; }
+  .app-shell .app-header { min-height: 0; padding: 14px 0; gap: 10px; }
+  .app-header h1 { font-size: 22px; }
+  .app-shell .lab-layout, .app-shell .lab-layout.awaiting-instance, .app-shell .controls-collapsed, .app-shell.presentation .lab-layout { display: flex; flex-direction: column; gap: 16px; }
+  .app-shell .lab-layout > * { width: 100%; }
+  .app-shell .workspace { order: 0; }
+  .app-shell .control-panel { order: 1; }
+  .app-shell .solution-panel { order: 2; }
+  .app-shell .canvas-heading { padding: 14px 16px; flex-wrap: wrap; gap: 8px; }
+  .app-shell .map-wrap > canvas { height: clamp(340px, 53vh, 520px); }
+  .app-shell .map-wrap.compact > canvas { height: 390px; }
+  .fleet-routes { max-height: 360px; }
+}
+@media (max-width: 600px) {
+  .app-shell { padding: 0 10px; }
+  .scenario-switch.cds--header { padding: 0 10px; gap: 0; min-height: 44px; flex-wrap: nowrap; }
+  .scenario-switch .scope-brand { width: 28px; min-height: 44px; flex-shrink: 0; }
+  .scenario-switch .scope-brand strong, .scenario-switch .scope-brand > span { display: none; }
+  .scenario-switch nav { height: 44px; width: auto; flex: 1; }
+  .scenario-switch nav button { min-height: 44px; font-size: 11px; padding: 8px 6px; }
+  .app-shell .app-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; padding: 12px 0; gap: 6px 2px; }
+  .app-header .app-title { display: contents; }
+  .app-header h1 { font-size: 18px; align-self: center; }
+  .app-header .app-title p { grid-column: 1 / -1; grid-row: 2; margin-top: 0; }
+  .app-header .app-title p { font-size: 11px; line-height: 1.5; }
+  .app-header nav { grid-column: 2; grid-row: 1; width: auto; justify-content: flex-end; gap: 0; }
+  .app-shell .app-header .connection.online { font-size: 0; width: 18px; height: 22px; padding: 5px; background: transparent; margin: 0; }
+  .app-header .icon-button { width: 30px; height: 36px; }
+  .app-shell .experience-tabs { gap: 14px; overflow-x: auto; margin-bottom: 10px; }
+  .app-shell .experience-tabs button { flex: 0 0 auto; font-size: 11px; min-height: 40px; padding: 10px 0; }
+  .app-shell .canvas-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) 35px; padding: 8px; gap: 6px; min-height: 0; }
+  .app-shell .mode-tabs { width: 100%; }
+  .app-shell .mode-tabs button { flex: 1; padding: 8px 2px; font-size: 9px; }
+  .graph-view-toolbar { padding: 6px 10px; }
+  .graph-view-toolbar button { font-size: 10px; }
+  .app-shell .canvas-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; padding: 12px; align-items: start; }
+  .app-shell .state-chip { padding: 4px; font-size: 9px; }
+  .app-shell .canvas-heading h2 { font-size: 17px; }
+  .graph-context { font-size: 10px; gap: 2px; }
+  .graph-context span { width: 100%; }
+  .app-shell .map-wrap > canvas { height: 370px; }
+  .map-note { left: 12px; font-size: 9px; }
+  .map-note .ml-3 { display: none; }
+  .map-tools { right: 8px; bottom: 48px; }
+  .map-tools button { width: 36px; height: 40px; min-height: 40px; }
+  .graph-map-footer { padding: 6px 10px; gap: 8px; }
+  .graph-map-footer .map-note { font-size: 9px; }
+  .app-shell .canvas-footer { padding: 10px 12px; }
+  .app-shell .label-toggle { min-height: 24px; }
+  .app-shell :is(input:not([type="checkbox"]):not([type="range"]), select) { font-size: 16px; }
+}

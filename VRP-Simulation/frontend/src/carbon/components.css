@@ -1,0 +1,40 @@
+/* Copyright IBM Corp. Apache-2.0. Adapted from Carbon button and UI shell Sass; see SOURCE.md. */
+.cds--btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 40px;
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 110ms cubic-bezier(.2,0,.38,.9), border-color 110ms cubic-bezier(.2,0,.38,.9);
+}
+.cds--btn--sm {min-height:32px;padding-block:6px}
+.cds--btn--lg {min-height:48px;padding-block:14px}
+.cds--btn.cds--btn--primary {background:var(--cds-button-primary);color:var(--cds-text-on-color)}
+.cds--btn.cds--btn--primary:hover:not(:disabled) {background:var(--cds-button-primary-hover)}
+.cds--btn.cds--btn--primary:active:not(:disabled) {background:var(--cds-button-primary-active)}
+.cds--btn.cds--btn--secondary {background:var(--cds-button-secondary);color:var(--cds-text-on-color)}
+.cds--btn.cds--btn--secondary:hover:not(:disabled) {background:var(--cds-button-secondary-hover)}
+.cds--btn.cds--btn--tertiary {border-color:var(--cds-button-tertiary);color:var(--cds-button-tertiary);background:transparent}
+.cds--btn.cds--btn--tertiary:hover:not(:disabled) {background:var(--cds-button-tertiary-hover);color:var(--cds-text-inverse)}
+.cds--btn.cds--btn--ghost {color:var(--cds-link-primary);background:transparent}
+.cds--btn.cds--btn--ghost:hover:not(:disabled) {background:var(--cds-background-hover)}
+.cds--btn.cds--btn--danger {background:var(--cds-button-danger-primary);color:var(--cds-text-on-color)}
+.cds--btn.cds--btn--danger:hover:not(:disabled) {background:var(--cds-button-danger-hover)}
+.cds--btn.cds--btn:disabled {opacity:1;background:var(--cds-button-disabled);border-color:transparent;color:var(--cds-text-on-color-disabled);cursor:not-allowed}
+.cds--btn.cds--btn:focus-visible {outline:2px solid var(--cds-focus);outline-offset:2px;box-shadow:inset 0 0 0 1px var(--cds-focus-inset)}
+.cds--btn__icon {display:inline-flex;flex-shrink:0;align-items:center;justify-content:center}
+.cds--btn__icon svg {width:16px;height:16px}
+.cds--header {min-height:48px;background:var(--cds-background);color:var(--cds-text-primary);border-bottom:1px solid var(--cds-border-subtle-00)}
+.cds--header button:hover:not(:disabled),.cds--header summary:hover {background:var(--cds-background-hover)}
+.cds--header button:focus-visible,.cds--header summary:focus-visible {outline:2px solid var(--cds-focus);outline-offset:-2px}
