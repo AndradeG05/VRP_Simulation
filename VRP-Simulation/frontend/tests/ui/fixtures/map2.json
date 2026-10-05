@@ -1,0 +1,99 @@
+{
+  "instance": {
+    "fleet": null,
+    "schema_version": 3,
+    "road_matrix": {
+      "provider": "osrm",
+      "method": "table",
+      "endpoint": null,
+      "travel_mode": "DRIVING",
+      "routing_preference": "TRAFFIC_UNAWARE",
+      "fetched_at": "2026-10-04T12:00:00Z",
+      "points": [
+        [
+          -23.55,
+          -46.63
+        ],
+        [
+          -23.56,
+          -46.64
+        ],
+        [
+          -23.57,
+          -46.65
+        ]
+      ],
+      "distances_m": [
+        [
+          0,
+          100,
+          200
+        ],
+        [
+          110,
+          0,
+          150
+        ],
+        [
+          220,
+          170,
+          0
+        ]
+      ]
+    },
+    "coordinate_system": "geographic",
+    "name": "Teste no mapa",
+    "depot": {
+      "lat": -23.55,
+      "lng": -46.63,
+      "address": null
+    },
+    "clients": [
+      {
+        "lat": -23.56,
+        "lng": -46.64,
+        "address": null,
+        "id": 1,
+        "demand": 2
+      },
+      {
+        "lat": -23.57,
+        "lng": -46.65,
+        "address": null,
+        "id": 2,
+        "demand": 3
+      }
+    ],
+    "vehicles": 3,
+    "capacity": 30
+  },
+  "cost_ready": true,
+  "distance_unit": "m",
+  "distance_convention": "OSRM Table directed distances of profile-selected routes; floor(metres * 1000 + 0.5) per arc; cost_ticks / 1000 = metres",
+  "cost_source": "osrm",
+  "matrix_fetched_at": "2026-10-04T12:00:00Z",
+  "routing_endpoint": null,
+  "projection": null,
+  "hash": "d1911e0ac58b278126a8a7d39bf36644690313dbd2198d07c8ce17916aaf2aa1",
+  "baseline": {
+    "feasible": true,
+    "errors": [],
+    "cost_ticks": 470000,
+    "routes": [
+      {
+        "vehicle": 3,
+        "visits": [
+          1,
+          2
+        ],
+        "load": 5,
+        "cost_ticks": 470000
+      }
+    ],
+    "served": 2,
+    "origin": "OR-Tools PATH_CHEAPEST_ARC · primeira solução viável"
+  },
+  "issues": [],
+  "feasibility_status": "feasible",
+  "total_demand": 5
+}

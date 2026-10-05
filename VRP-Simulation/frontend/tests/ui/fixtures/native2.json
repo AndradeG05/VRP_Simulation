@@ -1,0 +1,53 @@
+{
+  "instance": {
+    "fleet": null,
+    "vrp": null,
+    "schema_version": 1,
+    "name": "CVRP · 2 clientes · seed 7",
+    "depot": {
+      "x": 50.0,
+      "y": 50.0
+    },
+    "clients": [
+      {
+        "x": 61.259,
+        "y": 85.749,
+        "id": 1,
+        "demand": 1
+      },
+      {
+        "x": 74.812,
+        "y": 25.269,
+        "id": 2,
+        "demand": 3
+      }
+    ],
+    "vehicles": 2,
+    "capacity": 60,
+    "generator_seed": 7,
+    "distribution": "uniform"
+  },
+  "cost_ready": true,
+  "hash": "ec9ebf812eeed709eaa5ea26e00c940f75132d83aa8c43836b7edfdc6cae4f6a",
+  "baseline": {
+    "feasible": true,
+    "errors": [],
+    "cost_ticks": 134492,
+    "routes": [
+      {
+        "vehicle": 2,
+        "visits": [
+          2,
+          1
+        ],
+        "load": 4,
+        "cost_ticks": 134492
+      }
+    ],
+    "served": 2,
+    "origin": "OR-Tools PATH_CHEAPEST_ARC · primeira solução viável"
+  },
+  "issues": [],
+  "feasibility_status": "feasible",
+  "total_demand": 4
+}
