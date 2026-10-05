@@ -1,0 +1,39 @@
+{
+  "name": "vrp-simulation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs && npm run test:ui",
+    "test:ui": "vitest run --config vitest.config.ts --reporter=default --reporter=json --outputFile=../test-results/ui-automated.json",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "d3": "7.9.0",
+    "leaflet": "1.9.4",
+    "lucide-react": "1.48.0",
+    "plotly.js-basic-dist-min": "3.7.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/d3": "7.4.3",
+    "@types/leaflet": "1.9.21",
+    "@types/node": "22.20.4",
+    "@types/plotly.js": "3.0.14",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "jsdom": "29.1.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vite": "8.3.0",
+    "vitest": "5.0.3"
+  }
+}
