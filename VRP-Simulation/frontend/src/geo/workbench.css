@@ -1,0 +1,256 @@
+.geo-lab.workbench {
+  --page:#f3f5f3; --panel:#fff; --soft:#edf3ef; --line:#dce4de; --ink:#263b31; --muted:#657269;
+  --accent:#236747; --accent-hover:#174e33; --accent-soft:#e7f1e9; --success:#21714a; --success-soft:#e7f3eb;
+  --warning:#87530b; --warning-soft:#fff4df; --danger:#ae3c40; --danger-soft:#fceced; --focus:#286dc0; --radius:8px;
+  --info:#315f77; --info-soft:#eaf2f6; --motion-quick:140ms; --motion-state:240ms; --motion-ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light; background:var(--page); color:var(--ink); font:14px "Segoe UI",system-ui,sans-serif;
+  height:auto; min-height:100dvh; border:0; overflow:hidden; display:grid; grid-template-columns:minmax(0,1fr);
+  grid-template-rows:60px 88px auto auto minmax(0,1fr) auto;
+}
+.workbench button,.workbench input,.workbench select {font-family:inherit}
+.wb-visually-hidden {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.workbench button,.workbench summary {transition:background-color var(--motion-quick) ease-out,color var(--motion-quick) ease-out,transform var(--motion-quick) var(--motion-ease)}
+.workbench button:active:not(:disabled) {transform:translateY(1px)}
+.workbench button > svg {transition:transform var(--motion-quick) var(--motion-ease)}
+.workbench .wb-optimize:hover:not(:disabled) > svg,.workbench .wb-setup-action:hover > svg {transform:translateX(2px)}
+.workbench ::selection {background:#cce7d6;color:#193c29}
+.workbench input {caret-color:var(--accent)}
+.workbench * {scrollbar-color:#a7baad transparent;overscroll-behavior:auto}
+.workbench button:focus-visible,.workbench summary:focus-visible {outline:2px solid var(--focus);outline-offset:3px}
+.workbench small {color:var(--muted)}
+.wb-navigation {grid-row:1;display:flex;align-items:center;gap:48px;padding:0 24px;background:var(--panel);border-bottom:1px solid var(--line);z-index:10}
+.wb-brand {display:flex;gap:9px;align-items:center}
+.wb-brand svg {color:var(--accent)}
+.wb-brand strong {font-size:19px;letter-spacing:-.6px;font-weight:650}
+.wb-navigation nav {display:flex;align-self:stretch;gap:8px}
+.wb-navigation nav button {display:flex;align-items:center;gap:8px;padding:0 18px;border-radius:0;color:var(--muted);font-size:14px}
+.wb-navigation button[aria-current="page"] {color:var(--accent);box-shadow:inset 0 -3px var(--accent);font-weight:600}
+.wb-navigation-bottom {margin-left:auto;display:flex;gap:8px;align-items:center}
+.wb-navigation-bottom button,.wb-tools summary {display:flex;align-items:center;gap:8px;min-height:40px;padding:8px;font-size:13px}
+.wb-tools,.wb-solver-options {position:relative}
+.wb-tools summary,.wb-solver-options summary {cursor:pointer;border-radius:6px}
+.wb-tools summary {list-style:none}
+.wb-tools summary::-webkit-details-marker {display:none}
+.wb-tools summary:hover,.wb-solver-options summary:hover {background:var(--soft)}
+.wb-tools > div,.wb-solver-options > div {position:absolute;right:0;top:46px;width:260px;padding:8px;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px #263b3114;z-index:12}
+.wb-tools > div button {width:100%;text-align:left;padding:12px}
+.wb-header {grid-row:2;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 24px;min-width:0;width:100%;max-width:1560px;margin-inline:auto}
+.wb-scenario {min-width:0}
+.wb-scenario h1 {font-size:24px;font-weight:600;letter-spacing:-.7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wb-scenario p {font-size:13px;color:var(--muted);margin-top:6px}
+.wb-header-controls {display:flex;align-items:center;gap:16px;flex-shrink:0}
+.wb-solver-options summary {padding:10px 8px;color:var(--muted);font-size:13px}
+.wb-solver-options > div {padding:18px}
+.workbench .wb-header-controls label {font-size:12px;margin:0 0 12px;gap:5px}
+.workbench .wb-header-controls label:last-child {margin-bottom:0}
+.workbench .wb-header-controls select {min-height:40px;width:100%;background:var(--panel);font-size:13px}
+.workbench .wb-optimize {display:flex;align-items:center;justify-content:center;gap:9px;min-height:42px;min-width:136px;padding:10px 18px;background:var(--accent);color:#fff;font-weight:600}
+.workbench .wb-optimize:hover:not(:disabled) {background:var(--accent-hover)}
+.workbench .wb-optimize:disabled {opacity:1;background:#dfe6e0;color:#6a776e}
+.wb-stages {grid-row:3;padding:0 24px 16px}
+.wb-stages ol {display:flex;gap:24px;list-style:none;padding:0;margin:0}
+.wb-stages li {display:flex;gap:8px;align-items:center;flex:1}
+.wb-step-symbol {width:24px;height:24px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:12px}
+.wb-stages strong {display:block;font-size:12px}
+.wb-stages small {display:block;font-size:11px;margin-top:3px}
+.wb-stages .complete .wb-step-symbol {background:var(--accent-soft);color:var(--accent)}
+.wb-stages .current .wb-step-symbol {background:var(--accent);color:white}
+.wb-stages > p {display:none}
+.wb-state-dot {display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--muted);flex-shrink:0}
+.wb-state-dot.active {background:var(--success)}
+.workbench > .geo-notices {grid-row:4;max-height:110px;padding:0 24px}
+.workbench .geo-workspace {grid-row:5;display:grid;grid-template-columns:320px minmax(0,1fr);gap:16px;min-height:0;height:max(620px,calc(100dvh - 148px));padding:0 20px 12px;width:100%;max-width:1560px;margin-inline:auto}
+.workbench .geo-workspace.panel-collapsed {grid-template-columns:minmax(0,1fr)}
+.workbench.is-analysis .geo-workspace.panel-collapsed {grid-template-columns:minmax(0,1fr) 320px}
+.workbench .geo-controls,.workbench .geo-stage {border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden;min-width:0}
+.workbench .geo-panel-heading {height:58px;padding:0 20px}
+.workbench .geo-panel-heading h2 {font-size:15px;margin:0}
+.workbench .geo-panel-heading button {width:auto;display:flex;gap:3px;font-size:12px;color:var(--accent)}
+.workbench .geo-panel-tabs {padding:0 20px;gap:12px}
+.workbench .geo-panel-tabs button {font-size:12px;flex:initial;padding:8px 0}
+.workbench .geo-controls section {padding:22px 20px}
+.workbench .geo-controls h2 {font-size:15px}
+.workbench .geo-controls .geo-note {font-size:13px;line-height:1.55}
+.workbench .geo-delivery-count {display:none}
+.workbench .geo-wide {display:flex;align-items:center;justify-content:space-between;min-height:40px}
+.workbench .wb-add-delivery {border:1px solid var(--line);margin-bottom:12px;color:var(--accent)}
+.workbench .wb-fleet-summary {padding-block:10px}
+.workbench .wb-import-shortcut .geo-wide {justify-content:flex-start;gap:8px;color:var(--muted)}
+.workbench .wb-import-shortcut .geo-note {display:none}
+.workbench .geo-run-actions {padding:10px 20px}
+.workbench .geo-run-actions .geo-run-progress,.workbench .geo-run-actions > .primary {display:none}
+.workbench .geo-run-actions:has(.primary:only-child) {display:none}
+.workbench .geo-mapbar {min-height:54px;padding:6px 12px;gap:6px;background:var(--panel)}
+.workbench .geo-mapbar button {min-height:36px}
+.workbench .geo-view-tabs button {font-size:12px;padding:8px 10px}
+.workbench .geo-view-tabs button[aria-pressed="true"] {background:var(--accent-soft);color:var(--accent)}
+.workbench .geo-toolbar {width:auto;gap:2px;margin-left:auto;flex-wrap:nowrap}
+.workbench .geo-toolbar button {min-width:36px;padding:8px}
+.workbench .geo-toolbar button span {display:none}
+.workbench .geo-toolbar .geo-create-point span {display:inline}
+.workbench .geo-toolbar .geo-create-point {gap:6px;color:var(--accent);background:var(--accent-soft);font-size:12px}
+.workbench .geo-map-hint {font-size:13px;min-height:42px;background:var(--accent-soft);color:var(--accent);animation:wb-guidance var(--motion-state) var(--motion-ease)}
+.workbench .geo-controls .geo-note {padding:10px 12px;border-radius:6px;background:var(--info-soft);color:var(--info)}
+.workbench .geo-alert,.workbench .geo-road-error {animation:wb-notice var(--motion-state) var(--motion-ease)}
+.workbench .geo-alert {background:var(--warning-soft);color:var(--warning)}
+.workbench .wb-best .wb-distance {color:var(--accent)}
+.workbench .wb-results-foot:has(.wb-state-dot.active) {background:var(--success-soft);color:var(--success)}
+.workbench details[open] > summary {color:var(--accent)}
+.workbench .geo-panel-scroll,.workbench .geo-docked-editor {overscroll-behavior:auto}
+.workbench .geo-map-status {font-size:11px;background:var(--panel);padding:4px 10px;gap:5px}
+.workbench .geo-map-status button {min-height:28px;font-size:11px}
+.workbench .geo-map-caption {font-size:12px;padding:8px 12px}
+.workbench .geo-map {background:#e9ede6}
+.workbench .leaflet-tile-pane {filter:saturate(.55)}
+.workbench .leaflet-control-zoom a {background:var(--panel);color:var(--ink);border-color:var(--line)}
+@media (pointer:coarse) {
+  .workbench .leaflet-control-zoom a {width:42px;height:42px;line-height:42px;font-size:24px}
+  .workbench .geo-map-zoom-hint {top:108px}
+  .workbench .wb-map-legend summary,.workbench .wb-map-legend label {min-height:44px}
+  .workbench .wb-map-legend label {gap:10px;padding-block:6px;margin:0}
+  .workbench .wb-map-legend input {width:20px;height:20px}
+}
+.workbench .leaflet-control-attribution {background:#fffffff0;font-size:10px}
+.wb-map-legend {position:absolute;left:12px;top:12px;z-index:3;min-width:144px;max-height:calc(100% - 24px);overflow:auto;padding:8px 12px;background:#fffffff5;border:1px solid var(--line);border-radius:6px}
+.wb-map-legend summary {font-size:12px;font-weight:600;cursor:pointer;padding:4px 0}
+.workbench .wb-map-legend label {display:flex;flex-direction:row;gap:8px;align-items:center;margin:10px 0;font-size:12px}
+.wb-map-legend label i {display:block;width:16px;height:3px;border-radius:2px}
+.wb-map-legend label span {margin-left:auto;color:var(--muted)}
+.wb-map-legend input {width:14px;min-height:14px;height:14px}
+.wb-results {display:flex;flex-direction:column;min-height:0;overflow-y:auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);scrollbar-width:thin}
+.wb-results-empty {justify-content:center;padding:28px}
+.wb-setup-intro > svg {color:var(--accent);margin-bottom:16px}
+.wb-setup-intro h2 {font-size:21px;letter-spacing:-.4px;line-height:1.3}
+.wb-setup-intro p {color:var(--muted);font-size:14px;line-height:1.6;margin-top:12px}
+.wb-setup-action {display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:24px;border:1px solid var(--line);padding:12px;color:var(--accent);font-weight:600}
+.wb-results-heading {padding:24px 20px 20px;display:flex;flex-direction:column;gap:18px}
+.wb-results-heading h2 {font-size:17px;margin:0;font-weight:600}
+.wb-reduction strong {display:block;font-size:34px;letter-spacing:-1px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.wb-reduction.positive strong {color:var(--success)}
+.wb-reduction small {font-size:12px}
+.wb-comparison {display:grid;grid-template-columns:1fr 1fr;padding:0 20px 24px;gap:20px}
+.wb-comparison section + section {border-left:1px solid var(--line);padding-left:20px}
+.wb-comparison h3 {font-size:12px;margin:0 0 12px;font-weight:400;color:var(--muted)}
+.wb-comparison dl {margin:0}
+.wb-comparison dt {font-size:11px;color:var(--muted)}
+.wb-comparison dd {margin:6px 0 0;font-size:16px;font-weight:600;font-variant-numeric:tabular-nums}
+.wb-comparison dd small {font-size:12px;color:inherit;font-weight:400}
+.wb-comparison .wb-distance {font-size:22px;white-space:nowrap;letter-spacing:-.6px}
+.wb-comparison .wb-best .wb-distance {color:var(--accent)}
+.wb-analysis-details {padding:0 20px 20px}
+.wb-analysis-details > summary {cursor:pointer;font-size:13px;color:var(--accent);padding:12px 0;border-top:1px solid var(--line)}
+.wb-run-stats {display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:12px 0 20px}
+.wb-run-stats small {display:block;font-size:11px}
+.wb-run-stats strong {display:block;margin-top:6px;font-size:14px}
+.wb-convergence h3 {font-size:14px;margin:0 0 12px}
+.wb-chart-legend {display:flex;gap:12px;color:var(--muted);font-size:10px}
+.wb-chart-legend span {display:flex;align-items:center;gap:6px}
+.wb-chart-legend i {width:7px;height:7px;border-radius:50%;background:var(--success)}
+.wb-chart-legend span + span i {background:#7f8991}
+.wb-search-chart {display:block;width:100%;max-height:192px;min-height:140px;margin-top:6px}
+.wb-search-chart text {fill:var(--muted);font:10px "Segoe UI",sans-serif}
+.wb-chart-grid {stroke:var(--line);stroke-width:1}
+.wb-chart-baseline {stroke:#7f8991;stroke-dasharray:6 4;stroke-width:1}
+.wb-chart-fill {fill:#21714a0a}
+.wb-chart-best {fill:none;stroke:var(--success);stroke-width:2;stroke-linejoin:round}
+.wb-chart-end {fill:var(--success);stroke:var(--panel);stroke-width:2}
+.wb-chart-empty {min-height:140px;display:grid;place-content:center;justify-items:center;text-align:center;gap:12px;color:var(--muted);padding:16px;font-size:12px}
+.wb-results-foot {display:flex;align-items:center;border-top:1px solid var(--line);padding:10px 12px;gap:6px;font-size:11px;color:var(--muted);margin-top:auto}
+.wb-results-foot button {display:flex;align-items:center;gap:4px;margin-left:auto;color:var(--accent);min-height:36px;font-size:12px}
+.wb-replay-host {grid-row:6;min-width:0;min-height:0;max-height:300px;overflow-y:auto;scrollbar-width:thin;width:calc(100% - 40px);max-width:1520px;margin:0 auto 20px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.wb-replay-host > summary {padding:16px 20px;cursor:pointer;font-size:14px;font-weight:600}
+.wb-replay-host > summary span {font-weight:400;color:var(--muted);font-size:12px;margin-left:12px}
+.wb-replay {padding:0 20px 16px}
+.wb-replay-heading {display:flex;align-items:baseline;gap:16px}
+.wb-replay-heading h2 {display:none}
+.wb-replay-heading > span {font-size:12px;color:var(--muted)}
+.wb-timeline {display:flex;align-items:center;gap:10px;padding:10px 0}
+.wb-timeline > button {min-width:36px;min-height:36px;display:grid;place-items:center}
+.workbench .wb-play {background:var(--accent);color:#fff;border-radius:50%}
+.wb-timeline input {flex:1;min-width:40px;accent-color:var(--accent)}
+.wb-timeline select {width:64px;min-height:36px;padding:6px;font-size:12px}
+.wb-replay-data {display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px}
+.wb-replay-data > section {min-width:0}
+.wb-replay-data > section + section {border-left:1px solid var(--line);padding-left:24px}
+.wb-replay-data h3 {font-size:12px;margin:0 0 8px}
+.wb-replay-data h3 span {color:var(--muted);font-weight:400}
+.wb-table-scroll {max-height:124px;overflow:auto;scrollbar-width:thin}
+.wb-table-scroll table {width:100%;border-collapse:collapse;text-align:left;font-size:12px;font-variant-numeric:tabular-nums}
+.wb-table-scroll th {font-weight:400;color:var(--muted);background:var(--panel);position:sticky;top:0}
+.wb-table-scroll th,.wb-table-scroll td {padding:5px;border-bottom:1px solid var(--line);white-space:nowrap}
+.wb-table-scroll td button {display:flex;align-items:center;gap:8px;padding:2px;min-height:28px;font-size:12px;width:100%}
+.wb-table-scroll td i {width:9px;height:9px;border-radius:50%}
+.wb-table-scroll tr[aria-selected="true"] td {background:var(--accent-soft)}
+.wb-snapshot dl {display:grid;grid-template-columns:1fr auto;margin:0;gap:10px 8px;font-size:12px}
+.wb-snapshot dt {color:var(--muted)}
+.wb-snapshot dd {margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.wb-positive {color:var(--success)}
+.wb-differences p {display:flex;align-items:center;gap:8px;margin:12px 0;color:var(--muted);font-size:12px}
+.wb-differences i {width:24px;height:3px;display:block}
+.wb-differences i.added {background:#21714a}
+.wb-differences i.removed {background:#c94459}
+.wb-differences b {margin-left:auto;color:var(--ink)}
+.workbench .wb-differences label {display:flex;flex-direction:row;align-items:center;gap:7px;font-size:12px;margin:14px 0 0}
+.wb-simulation {margin-top:14px;border-top:1px solid var(--line)}
+.wb-simulation summary {padding:12px 0 0;cursor:pointer;color:var(--accent);font-size:12px}
+.workbench .wb-replay .geo-playback {background:transparent;padding:12px 0 0;border:0}
+.workbench.map-expanded .wb-results,.workbench.map-expanded .wb-replay-host {display:none}
+.geo-lab.workbench.map-expanded {height:100dvh}
+.workbench.map-expanded .geo-workspace.panel-collapsed {grid-template-columns:minmax(0,1fr)}
+@media (max-width:1100px) and (min-width:901px) {
+  .wb-navigation {gap:24px}
+  .workbench .geo-workspace {grid-template-columns:300px minmax(0,1fr);padding-inline:16px;gap:12px}
+  .workbench.is-analysis .geo-workspace.panel-collapsed {grid-template-columns:minmax(0,1fr) 300px}
+  .wb-replay-data {gap:16px}
+  .wb-replay-data > section + section {padding-left:16px}
+}
+@media (max-width:900px) {
+  .geo-lab.workbench {display:flex;height:auto;min-height:100dvh;overflow:visible}
+  .wb-navigation {flex-wrap:wrap;gap:0;padding:0 16px}
+  .wb-brand {min-height:54px}
+  .wb-brand strong {font-size:18px}
+  .wb-navigation nav {order:3;width:100%;height:48px}
+  .wb-navigation nav button {flex:1;justify-content:center;padding:0 12px}
+  .wb-navigation-bottom {gap:4px}
+  .wb-navigation-bottom > button span,.wb-tools summary span {display:none}
+  .wb-navigation-bottom > button,.wb-tools summary {min-width:44px;min-height:44px;justify-content:center}
+  .wb-tools > div {right:-42px}
+  .wb-header {flex-wrap:wrap;gap:16px;padding:20px 16px}
+  .wb-scenario {width:100%}
+  .wb-scenario h1 {font-size:22px}
+  .wb-scenario p {line-height:1.5}
+  .wb-header-controls {width:100%;justify-content:space-between}
+  .wb-solver-options > div {right:auto;left:0}
+  .workbench .wb-optimize {min-height:44px}
+  .wb-stages {padding:0 16px 16px}
+  .wb-stages ol {display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .wb-stages small {display:none}
+  .workbench > .geo-notices {padding:0 12px;max-height:none}
+  .workbench .geo-workspace,.workbench .geo-workspace.panel-collapsed {display:flex;flex-direction:column;height:auto;padding:0 12px 16px;gap:16px;overflow:visible}
+  .workbench .geo-controls {width:100%;height:auto;flex:none}
+  .workbench .geo-panel-scroll {overflow:visible}
+  .workbench .geo-stage {width:100%;height:max(600px,78svh);flex:none}
+  .workbench .geo-toolbar {flex:1;justify-content:flex-end}
+  .workbench .geo-mapbar button {min-width:36px;min-height:44px}
+  .workbench .geo-view-tabs {flex:initial}
+  .workbench .geo-view-tabs button {font-size:12px}
+  .wb-results {overflow:visible}
+  .wb-results-empty {min-height:280px}
+  .wb-replay-host {max-height:none;width:calc(100% - 24px);margin:0 12px 16px;overflow:visible}
+  .wb-replay {padding:0 16px 16px}
+  .wb-replay-heading {flex-wrap:wrap;gap:6px}
+  .wb-replay-data {grid-template-columns:1fr;gap:20px}
+  .wb-replay-data > section + section {border-left:0;border-top:1px solid var(--line);padding:16px 0 0}
+  .wb-table-scroll {max-height:220px}
+  .wb-table-scroll td button {min-height:36px}
+  .wb-timeline > button,.wb-timeline select {min-height:44px;min-width:44px}
+  .workbench:has(.geo-controls:not([hidden])) .wb-replay-host {display:none}
+}
+@keyframes wb-guidance {from {background:#d2eadb} to {background:var(--accent-soft)}}
+@keyframes wb-notice {from {opacity:.65} to {opacity:1}}
+@media (prefers-reduced-motion:reduce) {
+  .workbench button,.workbench summary {transition:background-color 100ms linear,color 100ms linear}
+  .workbench button > svg {transition:none}
+  .workbench button:active:not(:disabled),.workbench .wb-optimize:hover:not(:disabled) > svg,.workbench .wb-setup-action:hover > svg {transform:none}
+  .workbench .geo-map-hint,.workbench .geo-alert,.workbench .geo-road-error {animation:none}
+}
